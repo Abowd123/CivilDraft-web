@@ -1,0 +1,42 @@
+:root{
+--d:1;
+--s-px:calc(1px * var(--d));
+--s-2:calc(2px * var(--d));
+--s-3:calc(3px * var(--d));
+--s-4:calc(4px * var(--d));
+--s-5:calc(5px * var(--d));
+--s-6:calc(6px * var(--d));
+--s-8:calc(8px * var(--d));
+--s-10:calc(10px * var(--d));
+--s-12:calc(12px * var(--d));
+--s-14:calc(14px * var(--d));
+--s-16:calc(16px * var(--d));
+--r-pill:999px;
+--t-fast:120ms;
+--t-sm:140ms;
+--t-slow:180ms;
+--t-sheet:260ms;
+--press:inset 0 1px 4px rgb(0 0 0 / .18);
+--sunken:inset 0 1px 2px rgb(0 0 0 / .25);
+--ring-w:2px;
+--ring:var(--ring-w) solid var(--ac);
+}
+:root[data-density="compact"]{--d:.83}
+:root[data-density="touch"]{--d:1.17}
+@media (prefers-reduced-motion:reduce){
+:root{--t:1ms; --t-fast:1ms; --t-sm:1ms; --t-slow:1ms; --t-sheet:1ms}
+}
+:root{
+accent-color:var(--ac);
+caret-color:var(--ac);
+scrollbar-width:thin;
+scrollbar-color:var(--thumb) transparent;
+}
+::selection{background:var(--acq); color:var(--fg)}
+@media (pointer:coarse){
+html{-webkit-tap-highlight-color:transparent}
+}
+@media (prefers-contrast:more){
+:root{--ln:var(--ln2); --fg3:var(--fg2); --ring-w:3px}
+}
+:root[data-laptop]{--d:.86}
